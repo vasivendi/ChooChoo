@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choo choo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="screen">
+    <div class="menuroot page">
+      <h1>Choo choo</h1>
+      <div class="center">
+        <input type="text" class="player-name" placeholder="Add meg a neved!">
+        <div class="diff-select inline">
+          <span>Nehézség</span>
+          <button class="easy selected has-width">5x5</button>
+          <button class="hard has-width">7x7</button>
+        </div>
+        <div class="inline">
+          <button class="help has-width">Leírás</button>
+          <button class="start has-width" disabled>Start</button>
+        </div>
+      </div>
+    </div>
+    <div class="helproot page" hidden>
+      <div class="limiter">
+        <h1>Choo choo</h1>
+        <h2>Leírás</h2>
+        <p>
+          A játék különböző méretű négyzetrácsos hálón játszódhat, ahol a célunk az, hogy egy összefüggő körvasútvonalat
+          alkossunk úgy, hogy minden olyan helyre eljusson a vonat, ahova lehetséges.
+        </p>
+        <p>
+          Más szóval olyan vonalat szükséges húzni, hogy minden lefedhető cellát lefedjünk, miközben a keletkező
+          vasútvonal teljes egésze bejárható bármely elemről.
+        </p>
+        <h2>Használat</h2>
+        <p>
+          Az egérmutatót ráhelyezzük egy cellára, lenyomjuk a bal egérgombot. A bal gomb
+          nyomva tartása közben áthúzzuk egy szomszédos cellába az egérmutatót, majd a jelenlegi egy szomszédjába ami
+          nem az első cella, ekkor lesz lehelyezve az első elem.
+        </p>
+        <p>
+          Amíg el nem engedjük a bal gombot, a további szomszédos cellák meglátogatása esetén mindig az előzőleg
+          meglátogatott helyre fog kerülni egy új sín-elem, az előző előtti cella és a mutató által imént meglátogatott
+          cella közti eltérés alapján.
+        </p>
+        <p>Jobb egérgomb nyomva tartása esetén törölhetünk a pályáról, ekkor az egérmutató alatti cella kerül
+          kiürítésre.</p>
+        <p>Mindkét esetben a pálya elhagyása esetén (barna keret érintése vagy azon kívülre kerülés esetén) megszakad a
+          lehelyezés vagy törlés.</p>
+        <p>
+          Nem kerül lehelyezésre elem az alábbiak esetén:
+        </p>
+        <ul>
+          <li>Nem illeszthető a húzással megrajzolt elem a pályára (például hídra nem lehet kanyart húzni)</li>
+          <li>Vége a játéknak</li>
+        </ul>
+        <h2>Játék vége</h2>
+        <p>Amennyiben sikerül az összes szabad helyre sínt helyezni és az így keletkező pálya összefüggő körpálya, az
+          időzítő leáll és automatikusan beszúrásra kerül a teljesítési idő a játékos nevével együtt a toplistára.</p>
+      </div>
+      <button class="back">Vissza</button>
+    </div>
+    <div class="gameroot page" hidden>
+      <h1>Choo choo</h1>
+      <div class="inline">
+        <div class="details">
+          <div class="outline">
+            Útvonaltervező: <span class="player-name thick"></span>
+            <hr>
+            Eltelt idő:
+            <span class="time thick">00:00</span>
+          </div>
+          <br>
+          <button class="back-to-menu" hidden>Vissza a főmenübe</button>
+        </div>
+        <div class="primary-column">
+          <div class="highscores" hidden>
+            <h1>Toplista</h1>
+            <div class="subtext">
+              A(z) <span class="lv-idx">1</span>. számú <span class="lv-diff">könnyű</span> nehézségű pályához
+            </div>
+            <hr>
+            <ol class="hiscore-list">
+            </ol>
+          </div>
+          <div class="board-wrapper">
+            <table class="board has-width">
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="db.js"></script>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

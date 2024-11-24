@@ -1,0 +1,124 @@
+@media screen and (min-width: 1500px) {
+  div.screen {
+    max-width: 1500px;
+  }
+}
+
+body {
+  background-color: #eaefd3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+div.screen {
+  max-width: min-content;
+  margin: auto;
+  display: block;
+}
+
+button.selected {
+  background-color: darkblue;
+  color: white;
+}
+
+div.page {
+  min-width: max-content;
+  width: auto;
+  height: auto;
+}
+
+.limiter {
+  max-width: 60em;
+}
+
+.thick {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.menuroot{
+  font-size: x-large;
+}
+
+.menuroot > h1 {
+  text-align: center;
+}
+.menuroot > * {
+  margin-bottom: 0.5em;
+}
+.menuroot input {
+  font-size: larger;
+}
+
+.menuroot > .center {
+  * {
+    margin-bottom: 1ex;
+  }
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.inline > .has-width {
+  flex-grow: 1;
+}
+
+.gameroot .details {
+  display: block;
+  padding-right: 2em;
+  max-width: min-content;
+  text-align: center;
+}
+
+.gameroot .details .outline {
+  border-radius: 12pt;
+  padding: 1ex;
+  border: black solid 2pt;
+  max-height: min-content;
+}
+
+.gameroot .details > span {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+table.board > tbody > tr,
+table.board > tbody > tr > td {
+  padding: 0;
+  margin: unset;
+}
+
+table.board td div {
+  display: block;
+  width: 10vmin;
+  height: 10vmin;
+  outline: 1pt solid burlywood;
+  background-size: cover;
+}
+
+table.board {
+  border: 10pt groove brown;
+  border-radius: 10pt;
+}
+
+div.highscores {
+  border: 10pt groove brown;
+  border-radius: 10pt;
+  padding: 2em;
+  overflow-y: scroll;
+}
+
+h1{
+  text-align: center;
+}
+
+.subtext{
+  margin: auto;
+  text-align: center;
+}
+
+div.max{
+  min-width: max-content;
+}
